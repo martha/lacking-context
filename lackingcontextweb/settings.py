@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'lackingcontext.com']
 
+# Where to redirect on user login
+LOGIN_REDIRECT_URL = '/'
 
 # Application definition
 

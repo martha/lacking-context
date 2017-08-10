@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Lacking Context</title>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Lacking Context</a></h1>
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu">New</a>
+                <a href="{% url 'post_draft_list' %}" class="top-menu">Draft list</a>
+            {% endif %}
+
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
