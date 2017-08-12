@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: Helvetica;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  border-bottom: 2px solid blue;
+}
+
+.page-header {
+  display: none;
+}

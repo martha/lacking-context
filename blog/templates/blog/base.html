@@ -1,6 +1,7 @@
 {% load staticfiles %}
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Lacking Context</title>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
@@ -12,7 +13,6 @@
                 <a href="{% url 'post_draft_list' %}" class="top-menu">Draft list</a>
                 <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
             {% endif %}
-
         </div>
         <div class="content container">
             <div class="row">

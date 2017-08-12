@@ -4,9 +4,11 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, blank=True, null=True)
+    album_name = models.CharField(max_length=200)
+    album_artist = models.CharField(max_length=200)
     text = models.TextField()
-    album_art = models.TextField(max_length=500, blank=True, null=True)
+    album_art = models.TextField(max_length=500)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
