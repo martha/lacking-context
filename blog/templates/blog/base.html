@@ -7,7 +7,10 @@
     </head>
     <body>
         <div class="page-header">
-            <h1><a href="/">Lacking Context</a></h1>
+            <h1 class="title"><a href="/">Lacking Context</a></h1>
+            <p class="about">
+              a music blog by Jacob Yopak and Chris Techentin
+            </p>
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu">New</a>
                 <a href="{% url 'post_draft_list' %}" class="top-menu">Draft list</a>
