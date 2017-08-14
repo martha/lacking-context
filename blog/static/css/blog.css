@@ -1,3 +1,5 @@
+/* general styles */
+
 body {
   margin: 0;
   font-family: Helvetica;
@@ -11,22 +13,43 @@ a:visited {
   color: blue;
 }
 
-a:hover {
-  border-bottom: 2px solid blue;
+img {
+  width: 100%;
 }
+
+/* header styles */
 
 .page-header {
   width: 100%;
-  height: 300px;
+  height: 36vh;
   background-color: blue;
   color: white;
-  position: absolute;
+  overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  .page-header {
+    height: 11em;
+  }
+
+  .page-header .title {
+    left: 5%;
+    top: 1em;
+  }
+
+  .page-header .about {
+    top: 13.1em;
+  }
+}
+
+.page-header a {
+  color: white;
 }
 
 .page-header h1 {
   margin: 0;
   font-weight: normal;
-  font-size: 5em;
+  font-size: 4em;
   text-transform: uppercase;
   line-height: 0.7em;
   text-align: center;
@@ -34,18 +57,115 @@ a:hover {
 
 .title {
   position: absolute;
-  top: 100px;
-}
-
-.title a {
-  color: white;
+  top: 10vh;
   text-shadow: -10px -10px #ff00ff;
 }
 
 .about {
   position: absolute;
-  bottom: 0;
+  top: calc(36vh - 0.7em);
   right: 2px;
   margin: -3px;
   font-size: 0.8em;
 }
+
+/* user settings styles */
+
+.user-settings {
+  margin: 36px 12px 0;
+  padding: 12px;
+  border: 1px dotted black;
+}
+
+/* post list */
+
+.post-list {
+  padding: 3vh 0;
+}
+
+.post-list .post {
+  padding: 3vh 0;
+  vertical-align: top;
+}
+
+.post-list .post:hover {
+  background-color: #eeeeee;
+}
+
+.post-list .post-image {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.post-list .post-info {
+  width: calc(60% - 2.3em);
+  display: inline-block;
+  padding: 0 1em;
+  vertical-align: top;
+}
+
+.post-list .post-title a {
+  color: black;
+}
+
+.post-list .publication-info {
+  color: #ff00ff;
+  padding-top: 1em;
+  font-size: .8em;
+}
+
+@media (min-width: 600px) {
+  .post-list .post {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .post-list .post-title {
+    font-size: 3em;
+  }
+
+  .post-list .publication-info {
+    font-size: 1.3em;
+  }
+}
+
+/* post detail */
+
+.post-detail {
+  padding: 3vh 0;
+}
+
+.post-detail h1, .post-detail p {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.post .publication-info {
+  font-style: italic;
+  color: #ff00ff;
+}
+
+.post .post-text {
+  font-size: 1.2em;
+}
+
+
+@media (min-width: 800px) {
+  .post-detail img {
+    margin-top: 1em;
+    margin-left: 1em;
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+  }
+  .post-text {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+}
+
+/* login */
+
+

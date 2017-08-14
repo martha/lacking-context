@@ -1,21 +1,30 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <div class="post">
+    <div class="post-detail">
+        <div class="post">
+        <h1>
+            {{ post.album_artist }}'s 
+            <em>{{post.album_name }}</em>
+        </h1>
 
         {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
-            </div>
+            <p class="publication-info">
+                <span class="date">{{ post.published_date|date:"d.m.Y" }}</span> // 
+                <span class="author">{{ post.author }}</span>
+            </p>
         {% else %}
             <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
-        {% endif %}
+        {% endif %}   
 
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <img src={{ post.album_art }}/>
+        <p class="post-text">{{ post.text|linebreaksbr }}</p>
         {% if user.is_authenticated %}
-            <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">Edit</a>
-            <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}">Delete</a>
+            <div class="user-settings">
+                <a href="{% url 'post_edit' pk=post.pk %}">Edit</a> // 
+                <a href="{% url 'post_remove' pk=post.pk %}">Delete</a>
+            </div>
         {% endif %}
+        </div>
     </div>
 {% endblock %}
