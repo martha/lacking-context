@@ -14,3 +14,7 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lackingcontextweb.settings")
 
 application = get_wsgi_application()
+
+# for Heroku deployment
+from whitenoise.django import DjangoWhiteNoise
+application = DjangoWhiteNoise(application)
