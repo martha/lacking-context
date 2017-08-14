@@ -1,28 +1,28 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <div class="post-list">
-    {% for post in posts %}
+  <div class="post-list">
+  {% for post in posts %}
     <a href="{% url 'post_detail' pk=post.pk %}">
-        <div class="post">
-            <div class="post-image">
-                <img src={{ post.album_art }}/>
-            </div>
-
-            <div class="post-info">
-                <div class="post-title">
-                    {{ post.album_artist }}'s 
-                    <em>{{post.album_name}}</em>
-                </div>
-
-                <div class="publication-info">
-                    <span class="date">{{ post.published_date|date:"d.m.Y" }}</span>
-                    <span class="author">{{ post.author }}</span>
-                </div>
-                
-            </div>
+      <div class="post">
+        <div class="post-image">
+          <img src={{ post.album_art }}/>
         </div>
+
+        <div class="post-info">
+          <div class="post-title">
+            {{ post.album_artist }}'s 
+            <em>{{post.album_name}}</em>
+          </div>
+
+          <div class="publication-info">
+            <span class="date">{{ post.published_date|date:"d.m.Y" }}</span>
+            <span class="author">{{ post.author }}</span>
+          </div>
+            
+        </div>
+      </div>
     </a>
-    {% endfor %}
-    </div>
+  {% endfor %}
+  </div>
 {% endblock %}

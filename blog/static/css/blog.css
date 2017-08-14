@@ -69,14 +69,6 @@ img {
   font-size: 0.8em;
 }
 
-/* user settings styles */
-
-.user-settings {
-  margin: 36px 12px 0;
-  padding: 12px;
-  border: 1px dotted black;
-}
-
 /* post list */
 
 .post-list {
@@ -166,6 +158,32 @@ img {
   }
 }
 
-/* login */
+/* user settings styles */
 
+.user-settings {
+  margin: 2em 1em;
+  padding: 0 1em;
+  border: 1px dotted black;
+}
 
+.post-draft-list {
+  margin: 1em;
+}
+
+.login-form {
+  max-width: 320px;
+  margin: 6vh auto;
+  text-align: center;
+}
+
+.login-form table {
+  margin: 0 auto;
+}
+
+.login-form table td {
+  padding: 0.4em;
+}
+
+.login-form input[type="submit"] {
+  margin-top: 1em;
+}

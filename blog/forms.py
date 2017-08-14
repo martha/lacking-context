@@ -4,6 +4,6 @@ from .models import Post
 
 class PostForm(forms.ModelForm):
 
-    class Meta:
-        model = Post
-        fields = ('title', 'text', 'album_art')
+  class Meta:
+    model = Post
+    fields = ('album_artist', 'album_name', 'album_art', 'text')
