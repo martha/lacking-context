@@ -8,7 +8,7 @@ class Post(models.Model):
   album_name = models.CharField(max_length=200)
   album_artist = models.CharField(max_length=200)
   text = models.TextField()
-  album_art = models.TextField(max_length=500)
+  album_art = models.TextField(max_length=200)
   created_date = models.DateTimeField(default=timezone.now)
   published_date = models.DateTimeField(blank=True, null=True)
 

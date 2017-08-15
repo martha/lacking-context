@@ -187,3 +187,26 @@ img {
 .login-form input[type="submit"] {
   margin-top: 1em;
 }
+
+.padding-sides {
+  padding: 0 1em;
+}
+
+.post-form label {
+  width: 10em;
+}
+
+.post-form input[type="text"], textarea {
+  width: 100%;
+  margin: 0;
+  margin-top: 1em;
+  font-size: 1.4em;
+  line-height: 2em;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+button.save {
+
+}
