@@ -26,3 +26,6 @@ def get_album_details(album_id):
   except(spotipy.client.SpotifyException):
     print('Oh no! \'%s\' is not a valid album id' % album_id)
     return None
+
+if __name__ == '__main__':
+  print(str(get_album_details('1klALx0u4AavZNEvC4LrTL')))
