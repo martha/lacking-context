@@ -11,11 +11,14 @@
     {% if post.published_date %}
       <p class="publication-info">
         <span class="date">{{ post.published_date|date:"d.m.Y" }}</span> // 
-        <span class="author">{{ post.author }}</span>
+        <span class="author">{{ post.author }}</span> //
+        <span class="listen-link">
+          <a href="{{ post.listen_link }}">Listen</a>
+        </span>
       </p>
     {% endif %}
 
-    <img src={{ post.album_art }}/>
+    <img src="{{ post.album_art }}"/>
     <p class="post-text">{{ post.text|linebreaksbr }}</p>
     </div>
   </div>

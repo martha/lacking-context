@@ -28,4 +28,4 @@ def get_album_details(album_id):
     return None
 
 if __name__ == '__main__':
-  print(str(get_album_details('1klALx0u4AavZNEvC4LrTL')))
+  print(str(get_album_details('3lBPyXvg1hhoJ1REnw80fZ')))
